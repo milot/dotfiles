@@ -1,3 +1,6 @@
+# Start tmux
+if [ "$TMUX" = "" ]; then tmux; fi
+
 export PATH=/usr/bin:/home/milot/.local/bin:$PATH
 
 # WSL2-only fix
