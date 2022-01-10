@@ -39,7 +39,14 @@ alias k="kubectl"
 alias h="helm"
 
 # Check which distro is running
-_distro=$(awk '/^ID=/' /etc/*-release | awk -F'=' '{ print tolower($2) }')
+case "$OSTYPE" in
+  darwin*)
+    _distro="macos"
+  ;;
+  linux*)
+    _distro=$(awk '/^ID=/' /etc/*-release | awk -F'=' '{ print tolower($2) }')
+  ;;
+esac
 
 # Set an icon based on the distro
 case $_distro in
@@ -64,9 +71,16 @@ case $_distro in
     *devuan*)                ICON="";;
     *manjaro*)               ICON="";;
     *rhel*)                  ICON="";;
+    *macos*)                 ICON="";;
     *)                       ICON="";;
 esac
 
 # Load Starship
 export STARSHIP_DISTRO="$ICON "
 eval "$(starship init zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/milot/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/milot/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/milot/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/milot/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
