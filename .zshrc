@@ -37,6 +37,7 @@ alias grep='grep --color'
 alias kubectl="kubecolor"
 alias k="kubectl"
 alias h="helm"
+alias ip="ip -c"
 
 # Check which distro is running
 case "$OSTYPE" in
