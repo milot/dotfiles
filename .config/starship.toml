@@ -78,5 +78,5 @@ disabled = true
 format = "via [ $version]($style) "
 
 [kubernetes]
-format = 'on [ $context\($namespace\)](bold purple) '
+format = "on [ $context ](bold purple) "
 disabled = false
