@@ -60,7 +60,7 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <leader>l :Align
 nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>a :NERDTreeToggle<CR>
+nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
