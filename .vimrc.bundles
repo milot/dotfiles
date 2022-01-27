@@ -42,4 +42,4 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'sheerun/vim-polyglot'
-
+Plugin '907th/vim-auto-save'
