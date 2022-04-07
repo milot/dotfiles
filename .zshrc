@@ -258,9 +258,6 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 
 
-# Start tmux
-if [ "$TMUX" = "" ]; then tmux; fi
-
 export PATH=/usr/bin:/home/milot/.local/bin:$PATH
 
 # Custom kubectl functions
@@ -283,8 +280,7 @@ alias ll="exa --icons --group-directories-first -l"
 alias grep='grep --color'
 alias kubectl="kubecolor"
 alias k="kubectl"
+alias wk="watch -n1 kubectl"
 alias h="helm"
 alias ip="ip -c"
 
-# Enable second monitor
-alias two="xrandr --setprovideroutputsource 1 0 && xrandr --setprovideroutputsource 1 0"
