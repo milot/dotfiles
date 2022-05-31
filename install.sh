@@ -75,8 +75,8 @@ if [ "${args[*]-}" = "install" ]; then
     curl -L -o omz-install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
     ZSH= sh omz-install.sh
     rm omz-install.sh
-    git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
     msg "${NOFORMAT}* ${GREEN}Installing Starship"
     curl -L -o starship-install.sh https://starship.rs/install.sh
     chmod +x starship-install.sh
