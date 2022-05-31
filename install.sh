@@ -100,5 +100,6 @@ if [ "${args[*]-}" = "install" ]; then
     msg "${NOFORMAT}* ${CYAN}Copying .vimrc, .vimrc.bundles and .vimrc.local"
     cp .vimrc .vimrc.bundles .vimrc.bundles.local $HOME/
     msg "${NOFORMAT}* ${RED}NOTE: Remember to run :PluginInstall to install plugins!"
+    msg "${YELLOW}----${GREEN}DONE{$YELLOW}----"
     
 fi
