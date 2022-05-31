@@ -99,7 +99,10 @@ if [ "${args[*]-}" = "install" ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     msg "${NOFORMAT}* ${CYAN}Copying .vimrc, .vimrc.bundles and .vimrc.local"
     cp .vimrc .vimrc.bundles .vimrc.bundles.local $HOME/
+    msg "${RED}---------------------------------------------------------------------"
     msg "${NOFORMAT}* ${RED}NOTE: Remember to run :PluginInstall to install plugins!"
-    msg "${YELLOW}----${GREEN}DONE{$YELLOW}----"
+    msg "${RED}---------------------------------------------------------------------"
+    msg "${YELLOW}----${GREEN}DONE${YELLOW}----"
+    source $HOME/.zshrc
     
 fi
