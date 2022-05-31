@@ -1,6 +1,13 @@
 # dotfiles
 My personal customization files, these are intended to be cross-platform due to me changing computers frequently.
 
+## Installation
+To install run the following:
+```
+chmod +x install.sh
+./install.sh install
+```
+
 ## Custom vim traits
 
 * `,d` brings up [NERDTree](https://github.com/scrooloose/nerdtree), a sidebar buffer for navigating and manipulating files

@@ -67,38 +67,35 @@ parse_params "$@"
 setup_colors
 
 if [ "${args[*]-}" = "install" ]; then
-    msg "${RED}Requiring sudo permissions to install curl unzip"
+    msg "${RED}Requiring sudo permissions to install curl unzip starship and copy binary files such as exa and kubecolor to appropriate directories."
     sudo apt update
     sudo apt install curl unzip
     msg "${RED}Installation in progress:${NOFORMAT}"
     msg "${NOFORMAT}* ${GREEN}Installing Oh-my-zsh"
-    curl -L -o omz-install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-    ZSH= sh omz-install.sh
-    rm omz-install.sh
+    mkdir installation-files
+    curl -L -o installation-files/omz-install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+    ZSH= sh installation-files/omz-install.sh --unattended
     git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
     msg "${NOFORMAT}* ${GREEN}Installing Starship"
-    curl -L -o starship-install.sh https://starship.rs/install.sh
-    chmod +x starship-install.sh
-    ./starship-install.sh
-    rm starship-install.sh
+    curl -L -o installation-files/starship-install.sh https://starship.rs/install.sh
+    chmod +x sinstallation-files/tarship-install.sh
+    ./installation-files/starship-install.sh
     msg "${NOFORMAT}* ${CYAN}Copying Starship Configuration"
     mkdir $HOME/.config/
     cp .config/starship.toml $HOME/.config/starship.toml
     msg "${NOFORMAT}* ${GREEN}Installing kubecolor"
-    curl -L -o kubecolor.tar.gz https://github.com/hidetatz/kubecolor/releases/download/v0.0.20/kubecolor_0.0.20_Linux_x86_64.tar.gz
+    curl -L -o installation-files/kubecolor.tar.gz https://github.com/hidetatz/kubecolor/releases/download/v0.0.20/kubecolor_0.0.20_Linux_x86_64.tar.gz
     msg "${NOFORMAT}* ${CYAN}Copying kubecolor binaries"
-    tar zxf kubecolor.tar.gz
-    sudo mv kubecolor /usr/bin/
-    rm kubecolor.tar.gz LICENSE README.md
+    tar zxf installation-files/kubecolor.tar.gz -C installation-files/
+    sudo mv installation-files/kubecolor /usr/bin/
     msg "${NOFORMAT}* ${GREEN}Installing exa (modern replacement for ls)"
-    curl -L -o exa.zip https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
+    curl -L -o installation-files/exa.zip https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
     msg "${NOFORMAT}* ${CYAN}Copying exa binaries"
-    unzip exa.zip
-    sudo mv bin/exa /usr/bin
+    unzip installation-files/exa.zip -d installation-files
+    sudo mv installation-files/bin/exa /usr/bin
     mkdir $HOME/.zfunc
-    mv completions/exa.zsh $HOME/.zfunc
-    rm -fr bin completions man exa.zip
+    mv installation-files/completions/exa.zsh $HOME/.zfunc
     msg "${NOFORMAT}* ${CYAN}Copying .zshrc"
     cp .zshrc $HOME/.zshrc
     msg "${NOFORMAT}* ${GREEN}Installing Vundle (vim plugin manager)"
@@ -106,8 +103,9 @@ if [ "${args[*]-}" = "install" ]; then
     msg "${NOFORMAT}* ${CYAN}Copying .vimrc, .vimrc.bundles and .vimrc.local"
     cp .vimrc .vimrc.bundles .vimrc.bundles.local $HOME/
     msg "${RED}---------------------------------------------------------------------"
+    msg "${NOFORMAT}* ${YELLOW}DONE!"
     msg "${NOFORMAT}* ${RED}NOTE: Remember to run :PluginInstall to install plugins!"
     msg "${NOFORMAT}* ${RED}Now restart the terminal"
     msg "${RED}---------------------------------------------------------------------"
-    msg "${YELLOW}----${GREEN}DONE${YELLOW}----"
+    rm -fr installation-files
 fi
