@@ -72,7 +72,10 @@ if [ "${args[*]-}" = "install" ]; then
     sudo apt install curl unzip
     msg "${RED}Installation in progress:${NOFORMAT}"
     msg "${NOFORMAT}* ${GREEN}Installing Starship"
-    curl -sS https://starship.rs/install.sh | sh
+    curl -L -o starship-install.sh https://starship.rs/install.sh
+    chmod +x starship-install.sh
+    ./starship-install.sh
+    rm starship-install.sh
     msg "${NOFORMAT}* ${CYAN}Copying Starship Configuration"
     mkdir $HOME/.config/
     cp .config/starship.toml $HOME/.config/starship.toml
