@@ -71,6 +71,12 @@ if [ "${args[*]-}" = "install" ]; then
     sudo apt update
     sudo apt install curl unzip
     msg "${RED}Installation in progress:${NOFORMAT}"
+    msg "${NOFORMAT}* ${GREEN}Installing Oh-my-zsh"
+    curl -L -o omz-install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+    ZSH= sh omz-install.sh
+    rm omz-install.sh
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
     msg "${NOFORMAT}* ${GREEN}Installing Starship"
     curl -L -o starship-install.sh https://starship.rs/install.sh
     chmod +x starship-install.sh
