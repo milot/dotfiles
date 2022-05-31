@@ -107,8 +107,7 @@ if [ "${args[*]-}" = "install" ]; then
     cp .vimrc .vimrc.bundles .vimrc.bundles.local $HOME/
     msg "${RED}---------------------------------------------------------------------"
     msg "${NOFORMAT}* ${RED}NOTE: Remember to run :PluginInstall to install plugins!"
+    msg "${NOFORMAT}* ${RED}Now restart the terminal"
     msg "${RED}---------------------------------------------------------------------"
     msg "${YELLOW}----${GREEN}DONE${YELLOW}----"
-    source $HOME/.zshrc
-    
 fi
