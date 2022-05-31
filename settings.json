@@ -1,4 +1,5 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
@@ -11,12 +12,12 @@
             "keys": "ctrl+c"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
             "command": "paste",
             "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -28,68 +29,63 @@
             "keys": "alt+shift+d"
         }
     ],
-    "showTabsInTitlebar": true,
-    "tabSwitcherMode": "inOrder",
-    "useAcrylicInTabRow": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
+    "defaultProfile": "{51855cb2-8cce-5362-8f54-464b92b32386}",
     "launchMode": "maximized",
     "profiles": 
     {
-        "defaults": 
-        {
-            "colorScheme": "xcad_tdl",
-            "font": 
-            {
-                "face": "Hack Nerd Font",
-                "size": 14
-            },
-            "historySize": 12000,
-            "opacity": 95,
-            "scrollbarState": "visible",
-            "useAcrylic": false
-        },
+        "defaults": {},
         "list": 
         [
             {
-                "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
-                "hidden": false,
-                "name": "Kali Linux",
-                "icon": "%userprofile%\\icons\\kali.png",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-                "hidden": false,
-                "name": "Debian Linux",
-                "icon": "%userprofile%\\icons\\debian.png",
-                "source": "Windows.Terminal.Wsl",
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "icon": "%userprofile%\\icons\\ubuntu.png",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
+                "font": 
+                {
+                    "face": "Hack NF"
+                },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
-                "icon": "%userprofile%\\icons\\windows.png",
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "commandline": "cmd.exe",
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "colorScheme": "xcad_tdl",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Hack NF",
+                    "size": 11
+                },
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
                 "hidden": false,
-                "name": "Classic Command Prompt",
-                "icon": "%userprofile%\\icons\\windows.png"
+                "name": "Ubuntu",
+                "opacity": 95,
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
+                "startingDirectory": "D:\\Code"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "D:/Code"
+            },
+            {
+                "colorScheme": "xcad_hackthebox",
+                "font": 
+                {
+                    "face": "Hack NF",
+                    "size": 11
+                },
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "name": "Debian",
+                "opacity": 100,
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
-     "schemes": 
+    "schemes": 
     [
         {
             "background": "#080808",
@@ -276,6 +272,52 @@
             "yellow": "#C4A000"
         },
         {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "UbuntuColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -297,6 +339,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#C0C0C0",
             "yellow": "#808000"
+        },
+        {
+            "background": "#2E3440",
+            "black": "#3B4252",
+            "blue": "#81A1C1",
+            "brightBlack": "#4C566A",
+            "brightBlue": "#81A1C1",
+            "brightCyan": "#8FBCBB",
+            "brightGreen": "#A3BE8C",
+            "brightPurple": "#B48EAD",
+            "brightRed": "#BF616A",
+            "brightWhite": "#ECEFF4",
+            "brightYellow": "#EBCB8B",
+            "cursorColor": "#ECEFF4",
+            "cyan": "#88C0D0",
+            "foreground": "#D8DEE9",
+            "green": "#A3BE8C",
+            "name": "nord",
+            "purple": "#B48EAD",
+            "red": "#BF616A",
+            "selectionBackground": "#ECEFF4",
+            "white": "#E5E9F0",
+            "yellow": "#EBCB8B"
         },
         {
             "background": "#111927",
