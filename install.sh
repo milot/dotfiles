@@ -58,7 +58,7 @@ parse_params() {
 
   args=("$@")
 
-  [[ ${#args[@]} -eq 0 ]] && die "Missing script arguments"
+  [[ ${#args[@]} -eq 0 ]] && die "Missing script arguments use install or help."
 
   return 0
 }
