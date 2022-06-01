@@ -80,7 +80,7 @@ if [ "${args[*]-}" = "install" ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
     msg "${NOFORMAT}* ${GREEN}Installing Starship"
     curl -L -o installation-files/starship-install.sh https://starship.rs/install.sh
-    chmod +x sinstallation-files/tarship-install.sh
+    chmod +x installation-files/starship-install.sh
     ./installation-files/starship-install.sh
     msg "${NOFORMAT}* ${CYAN}Copying Starship Configuration"
     mkdir $HOME/.config/
