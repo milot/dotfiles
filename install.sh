@@ -67,9 +67,10 @@ parse_params "$@"
 setup_colors
 
 if [ "${args[*]-}" = "install" ]; then
-    msg "${RED}Requiring sudo permissions to install curl unzip starship and copy binary files such as exa and kubecolor to appropriate directories."
+    msg "${RED}Requiring sudo permissions to install curl, unzip, zsh starship and copy binary files such as exa and kubecolor to appropriate directories."
     sudo apt update
-    sudo apt install curl unzip
+    sudo apt install curl unzip zsh -y
+    chsh -s /usr/bin/zsh
     msg "${RED}Installation in progress:${NOFORMAT}"
     msg "${NOFORMAT}* ${GREEN}Installing Oh-my-zsh"
     mkdir installation-files
