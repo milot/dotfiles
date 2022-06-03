@@ -24,6 +24,7 @@ alias kubectl="kubecolor"
 alias k="kubectl"
 alias h="helm"
 alias ip="ip -c"
+alias wk="watch -n1 kubectl"
 
 # Functions
 
