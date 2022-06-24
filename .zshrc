@@ -1,6 +1,9 @@
 # Exports
 
+export GOPATH=~/go
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/go/bin:$PATH
+export PATH=$PATH:$GOPATH/bin
+export GO111MODULE=on
 export ZSH="$HOME/.oh-my-zsh"
 fpath=(~/.zfunc $fpath)
 
@@ -24,7 +27,6 @@ alias kubectl="kubecolor"
 alias k="kubectl"
 alias h="helm"
 alias ip="ip -c"
-alias wk="watch -n1 kubectl"
 
 # Functions
 
@@ -82,3 +84,5 @@ esac
 # Load Starship
 export STARSHIP_DISTRO="$ICON "
 eval "$(starship init zsh)"
+
+
