@@ -42,6 +42,7 @@ P.S. You can delete this when you're done too. It's your config now :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -58,6 +59,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 -- NOTE: Here is where you install your plugins.
 --  You can configure plugins using the `config` key.
 --
@@ -67,6 +69,8 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
   -- Terminal toggle
   {'akinsho/toggleterm.nvim', version = "*", config = true},
+  {'nvim-tree/nvim-tree.lua', version = "*", config=true},
+  {'nvim-tree/nvim-web-devicons', version = "*", config=true},
 
   -- Git related plugins
   'tpope/vim-fugitive',
@@ -497,3 +501,34 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+local status_ok, toggleterm = pcall(require, "toggleterm")
+if not status_ok then
+	return
+end
+
+toggleterm.setup({
+	size = 20,
+	open_mapping = [[<c-\>]],
+	hide_numbers = true,
+	shade_filetypes = {},
+	shade_terminals = true,
+	shading_factor = 2,
+	start_in_insert = true,
+	insert_mappings = true,
+	persist_size = true,
+	direction = "horizontal",
+	close_on_exit = true,
+	shell = vim.o.shell,
+	float_opts = {
+		border = "curved",
+		winblend = 0,
+		highlights = {
+			border = "Normal",
+			background = "Normal",
+		},
+	},
+})
+
+ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
+    noremap = true
+  })
