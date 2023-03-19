@@ -70,6 +70,14 @@ if [ "${args[*]-}" = "install" ]; then
     msg "${RED}Requiring sudo permissions to install curl, unzip, zsh starship and copy binary files such as exa and kubecolor to appropriate directories."
     sudo apt update
     sudo apt install curl unzip zsh -y
+    msg "${RED} Installing NeoVim"
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    chmod u+x nvim.appimage
+    ./nvim.appimage
+    git clone https://github.com/nvim-lua/kickstart.nvim.git
+    mkdir ~/.config/nvim
+    mv kickstart.nvim/* ~/.config/nvim/*
+    rm -dr kickstart.nvim
     chsh -s /usr/bin/zsh
     msg "${RED}Installation in progress:${NOFORMAT}"
     msg "${NOFORMAT}* ${GREEN}Installing Oh-my-zsh"
