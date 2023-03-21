@@ -76,7 +76,7 @@ if [ "${args[*]-}" = "install" ]; then
     ./nvim.appimage
     git clone https://github.com/nvim-lua/kickstart.nvim.git
     mkdir ~/.config/nvim
-    mv kickstart.nvim/* ~/.config/nvim/*
+    mv kickstart.nvim/* ~/.config/nvim/
     rm -dr kickstart.nvim
     chsh -s /usr/bin/zsh
     msg "${RED}Installation in progress:${NOFORMAT}"
