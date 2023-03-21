@@ -71,6 +71,8 @@ require('lazy').setup({
   {'akinsho/toggleterm.nvim', version = "*", config = true},
   {'nvim-tree/nvim-tree.lua', version = "*", config=true},
   {'nvim-tree/nvim-web-devicons', version = "*", config=true},
+  {'sitiom/nvim-numbertoggle', version = "*"},
+  {'hashicorp/terraform-ls', version = "*"},
 
   -- Git related plugins
   'tpope/vim-fugitive',
