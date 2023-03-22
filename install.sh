@@ -67,7 +67,7 @@ parse_params "$@"
 setup_colors
 
 if [ "${args[*]-}" = "install" ]; then
-    msg "${RED}Requiring sudo permissions to install curl, unzip, zsh starship and copy binary files such as exa and kubecolor to appropriate directories."
+    msg "${RED}Requiring sudo permissions to install xclip, xsel, curl, unzip, zsh starship and copy binary files such as exa and kubecolor to appropriate directories."
     sudo apt update
     sudo apt install curl unzip zsh -y
     msg "${RED} Installing NeoVim"
