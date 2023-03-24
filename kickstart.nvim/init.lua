@@ -35,7 +35,16 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
   -- Terminal toggle
   {'akinsho/toggleterm.nvim', version = "*", config = true},
-  {'nvim-tree/nvim-tree.lua', version = "*", config=true},
+  {'nvim-tree/nvim-tree.lua', version = "*",config = function()
+    require("nvim-tree").setup({
+       actions = {
+          open_file = {
+            quit_on_open = true,
+          },
+        },
+    })
+  end
+  },
   {'nvim-tree/nvim-web-devicons', version = "*", config=true},
   {'sitiom/nvim-numbertoggle', version = "*"},
   {'hashicorp/terraform-ls', version = "*"},
@@ -45,9 +54,7 @@ require('lazy').setup({
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
+        require("nvim-surround").setup({})
     end
   },
 
@@ -393,7 +400,7 @@ end
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
   -- clangd = {},
-  -- gopls = {},
+  gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
@@ -513,4 +520,3 @@ toggleterm.setup({
   })
 
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', {})
--- vim.api.nvim_set_keymap('<leader>;', 'function() io.popen("echo test " .. vim.fn.expand("%")) end', 'call shell')
