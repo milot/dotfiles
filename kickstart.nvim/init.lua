@@ -47,6 +47,7 @@ require('lazy').setup({
   },
   {'nvim-tree/nvim-web-devicons', version = "*", config=true},
   {'sitiom/nvim-numbertoggle', version = "*"},
+  {'jiangmiao/auto-pairs', version = "*"},
   {'hashicorp/terraform-ls', version = "*"},
   {'mattn/vim-goimports', version = "*"},
   {'kenn7/vim-arsync', version = "*"},
