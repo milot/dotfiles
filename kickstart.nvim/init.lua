@@ -48,6 +48,7 @@ require('lazy').setup({
   {'nvim-tree/nvim-web-devicons', version = "*", config=true},
   {'sitiom/nvim-numbertoggle', version = "*"},
   {'hashicorp/terraform-ls', version = "*"},
+  {'mattn/vim-goimports', version = "*"},
   {'kenn7/vim-arsync', version = "*"},
   {
     "kylechui/nvim-surround",
@@ -57,6 +58,7 @@ require('lazy').setup({
         require("nvim-surround").setup({})
     end
   },
+  {'Pocco81/auto-save.nvim', version = "*", config = true},
 
   -- Git related plugins
   'tpope/vim-fugitive',
@@ -519,4 +521,3 @@ toggleterm.setup({
     noremap = true
   })
 
-vim.api.nvim_set_keymap('i', 'jk', '<Esc>', {})
