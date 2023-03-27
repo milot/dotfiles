@@ -46,6 +46,23 @@ require('lazy').setup({
   end
   },
   {'nvim-tree/nvim-web-devicons', version = "*", config=true},
+  {'yamatsum/nvim-cursorline',
+    version = "*",
+    config = function()
+      require('nvim-cursorline').setup ({
+        cursorline = {
+          enable = true,
+          timeout = 10,
+          number = false,
+        },
+        cursorword = {
+          enable = true,
+          min_length = 3,
+          hl = { underline = true },
+        }
+    })
+    end
+  },
   {'sitiom/nvim-numbertoggle', version = "*"},
   {'jiangmiao/auto-pairs', version = "*"},
   {'hashicorp/terraform-ls', version = "*"},
