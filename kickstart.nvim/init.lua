@@ -35,6 +35,7 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
   -- Terminal toggle
   {'akinsho/toggleterm.nvim', version = "*", config = true},
+  {'dyng/ctrlsf.vim', version = "*"},
    {'nvim-neo-tree/neo-tree.nvim',
     version = "*",
     config = function()
@@ -560,3 +561,5 @@ set.shiftwidth = 2
 
 local options = { noremap = true }
 vim.keymap.set("i", "jk", "<Esc>", options)
+vim.keymap.set("n", "<leader>s.", ":CtrlSF ")
+
