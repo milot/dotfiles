@@ -35,16 +35,9 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
   -- Terminal toggle
   {'akinsho/toggleterm.nvim', version = "*", config = true},
-  {'nvim-tree/nvim-tree.lua', version = "*",config = function()
-    require("nvim-tree").setup({
-       actions = {
-          open_file = {
-            quit_on_open = true,
-          },
-        },
-    })
-  end
-  },
+  {'nvim-neo-tree/neo-tree.nvim', version = "*", config = true},
+  {'nvim-lua/plenary.nvim', version = "*"},
+  {'MunifTanjim/nui.nvim', version = "*"},
   {'nvim-tree/nvim-web-devicons', version = "*", config=true},
   {'yamatsum/nvim-cursorline',
     version = "*",
@@ -535,7 +528,7 @@ toggleterm.setup({
 	},
 })
 
- vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
+ vim.keymap.set('n', '<leader>e', ':NeoTreeFocusToggle<CR>', {
     noremap = true
   })
 
