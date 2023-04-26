@@ -269,6 +269,14 @@ local default_plugins = {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({})
+    end
+  },
 }
 
 local config = require("core.utils").load_config()
