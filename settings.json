@@ -4,6 +4,10 @@
     "actions": 
     [
         {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
             "command": 
             {
                 "action": "copy",
@@ -12,12 +16,11 @@
             "keys": "ctrl+c"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
+            "command": "paste"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
+            "command": "unbound",
+            "keys": "ctrl+v"
         },
         {
             "command": 
@@ -32,13 +35,15 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{51855cb2-8cce-5362-8f54-464b92b32386}",
-    "launchMode": "maximized",
+    "launchMode": "default",
     "profiles": 
     {
         "defaults": {},
         "list": 
         [
             {
+                "colorScheme": "nord",
+                "experimental.retroTerminalEffect": false,
                 "font": 
                 {
                     "face": "Hack NF"
@@ -46,20 +51,23 @@
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore"
+                "opacity": 100,
+                "source": "Windows.Terminal.PowershellCore",
+                "startingDirectory": "D:\\Code",
+                "useAcrylic": false
             },
             {
-                "colorScheme": "xcad_tdl",
+                "colorScheme": "Catppuccin Mocha",
                 "cursorShape": "bar",
                 "font": 
                 {
-                    "face": "Hack NF",
-                    "size": 11
+                    "face": "JetBrainsMono NF",
+                    "size": 14.0
                 },
                 "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
                 "hidden": false,
                 "name": "Ubuntu",
-                "opacity": 95,
+                "opacity": 100,
                 "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
                 "startingDirectory": "D:\\Code"
             },
@@ -75,13 +83,37 @@
                 "font": 
                 {
                     "face": "Hack NF",
-                    "size": 11
+                    "size": 11.0
                 },
                 "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
                 "hidden": false,
                 "name": "Debian",
                 "opacity": 100,
                 "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{5fb123f1-af88-5b5c-8953-d14a8def1978}",
+                "hidden": false,
+                "name": "PowerShell 7",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{80fd5352-42ac-5edb-a994-ab6cc7a3be8a}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{0c814644-c648-58c1-afac-bd3517d1b513}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+                "hidden": true,
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
             }
         ]
     },
@@ -132,6 +164,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "background": "#1E1E2E",
+            "black": "#45475A",
+            "blue": "#89B4FA",
+            "brightBlack": "#585B70",
+            "brightBlue": "#89B4FA",
+            "brightCyan": "#94E2D5",
+            "brightGreen": "#A6E3A1",
+            "brightPurple": "#F5C2E7",
+            "brightRed": "#F38BA8",
+            "brightWhite": "#A6ADC8",
+            "brightYellow": "#F9E2AF",
+            "cursorColor": "#F5E0DC",
+            "cyan": "#94E2D5",
+            "foreground": "#CDD6F4",
+            "green": "#A6E3A1",
+            "name": "Catppuccin Mocha",
+            "purple": "#F5C2E7",
+            "red": "#F38BA8",
+            "selectionBackground": "#585B70",
+            "white": "#BAC2DE",
+            "yellow": "#F9E2AF"
         },
         {
             "background": "#282C34",
@@ -478,5 +533,6 @@
             "white": "#F8F8F2",
             "yellow": "#E5E510"
         }
-    ]
+    ],
+    "themes": []
 }
