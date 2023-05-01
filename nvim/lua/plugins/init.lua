@@ -277,6 +277,11 @@ local default_plugins = {
         require("nvim-surround").setup({})
     end
   },
+  {
+    "fatih/vim-go",
+    lazy = false,
+    version = "*"
+  },
 }
 
 local config = require("core.utils").load_config()
