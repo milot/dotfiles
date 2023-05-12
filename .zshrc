@@ -84,5 +84,5 @@ esac
 # Load Starship
 export STARSHIP_DISTRO="$ICON "
 eval "$(starship init zsh)"
-
+if [ "$TMUX" = "" ]; then tmux; fi
 
